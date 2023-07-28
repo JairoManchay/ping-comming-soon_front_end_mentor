@@ -21,6 +21,21 @@ html{
     position: relative;
 }
 
+.ping{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80em;
+    height: 12em;
+    left: 0.5%;
+    right: 0.5%;
+}
+
+.ping img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
 .cuadro_titulo{
     position: relative;
     display: flex;
@@ -33,7 +48,7 @@ html{
 
 .titulo{
     position: absolute;
-    top: 130%;
+    top: -150%;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -64,12 +79,11 @@ p{
     display: flex;
     justify-content: space-between;
     gap: 85px;
-    
 }
 
 .input_group{
     position: relative;
-    top: 350%;
+    top: 100%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -85,7 +99,7 @@ p{
 
 
 #email{
-    width: 60%;
+    width: 125%;
     border-radius: 20px;
     border: 1px solid var(--pay-blue);
     font-size: 12px;
@@ -94,7 +108,7 @@ p{
     padding:0 20px;
     color: var(--very-dark-blue);
     font-weight: 700;
-    padding-right: 190px;
+    margin-right: 80px;
     margin-left: -10px;
 }
 
@@ -137,7 +151,7 @@ p{
 
 .image_square{
     position: absolute;
-    top: 500%;
+    top: 300%;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -156,8 +170,7 @@ footer{
     height: 100px;
     width: 100%;
     position: absolute;
-    top: 1160%;
-    bottom: 0;
+    top: 350%;
     display: flex;
     flex-direction: column;
 }
@@ -226,8 +239,58 @@ footer{
 }
 .attribution a { color: hsl(228, 45%, 44%); }
 
+@media (max-width: 1024px) and (min-width: 769px){
+    footer{
+        height: 40%;
+        width: 100%;
+        position: absolute;
+        top: 350%;
+        left: 14%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
 
-@media (max-width: 375px){
+@media (max-width: 969px) and (min-width:476px){
+    .ping{
+        top: 0;
+        position: relative;
+        min-width: 100%;
+        left: 0.5%;
+        right: 0.5%;
+    }
+    .image_square{
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        max-height: 80%;
+        max-width: 50%;
+        top: 600%;
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    footer{
+        height: 40%;
+        width: 80em;
+        position: absolute;
+        top: 350%;
+        left: 4%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 475px){
+    .ping{
+        display: none;
+    }
     .cuadro_titulo{
         position: relative;
         display: flex;
@@ -241,11 +304,10 @@ footer{
 
     .titulo{
         position: absolute;
-        top: 70%;
+        top: 20%;
         display: flex;
         justify-content: center;
         flex-direction: column;
-    
     }
 
     .titulo h2{
@@ -266,7 +328,7 @@ footer{
     
     .input_group{
         position: relative;
-        top: 180%;
+        top: 135%;
         justify-content: center;
         display: flex;
         align-items: center;
@@ -277,44 +339,54 @@ footer{
         display: flex;
         flex-direction: column;
         width: 100%;
-
     }
 
     .input_text{
         position: relative;
-        left: 5%;
+        left: 3%;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 80%;
+        width: 100%;
         right: 20%;
         padding: 10px;
         height: 50px;
+        margin-left: -22px;
+
     }
     
     
     #email{
-        width: 40%;
+        width: 100%;
         border-radius: 20px;
         border: 1px solid var(--pay-blue);
         font-size: 12px;
-        height: 45px;
+        height: 50px;
         outline: 0;
         padding:0 20px;
         color: var(--very-dark-blue);
         font-weight: 700;
-        padding-right: 190px;
-        margin-left: -10px;
+
     }
 
     .boton_notify{
         position: relative;
-        left: 2%;
-        width: 90%;
+        left: -3%;
+        min-width: 110%;
         padding: 10px;
         margin-top: -78px;
     }
 
+    #mensaje{
+        text-align: center;
+        margin-bottom: -20px;
+        padding-bottom: 10px;
+        display: none;
+        color: red;
+        font-style: italic;
+        font-size: 12px;
+        font-family: var(--letra-principal);
+    }
     
     #notify{
         width: 100%;
@@ -328,6 +400,40 @@ footer{
         box-shadow:  -2px 4px 2px 1px  var(--pay-blue);
         font-family: var(--letra-principal);
         cursor: pointer;
+        margin-left: -22px;
+    }
+
+    .image_square{
+        position: absolute;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        max-height: 100%;
+        max-width: 90%;
+        top: 300%;
+    }
+    
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    footer{
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        top: 500%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #parrafo_final{
+        position: relative;
+        top: 70%;
+        font-size: 14px;
+        font-weight: 200;
     }
 
 }
